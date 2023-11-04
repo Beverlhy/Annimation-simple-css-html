@@ -1,0 +1,74 @@
+body{
+    margin: 0%;
+    background-color: rgba(2, 2, 2, 0.699);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.debut{
+    display: flex;
+    position: relative;
+}
+.debut span{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(58, 4, 7);
+    box-shadow: 0px 0px 0px 5px rgba(17, 17, 17, 0.349), 0 0 0 4px rgba(12, 11, 11, 0.452);
+    animation: deb 10s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+.debut span:nth-child(even){
+    background-color: rgb(252, 252, 252);
+}
+h3{
+    position: relative;
+    font-size: 80px;
+    display: flex;
+    color: aliceblue;
+    overflow: hidden;
+    top: 40%;
+    justify-content: center;
+    animation: anim 5.5s linear;
+}
+h3::before{
+    content: '';
+    position: absolute;
+    left: 0%;
+    background: linear-gradient(90deg,transparent 0%, rgb(61, 61, 61) 0%, rgb(75, 74, 74) 10%);
+    animation: animer 5.5s linear forwards;
+}
+h3 span{
+    color: aqua;
+    font-size:75px;
+}
+/***************************animation**************************/
+@keyframes deb {
+    0%{
+       transform: translateY(100vh) scale(0);
+        filter: blur(5px);
+      }
+      100%{
+          filter: blur(20px);
+          transform: translateY(-10vh) scale(1);
+      }
+}
+@keyframes animer {
+    0%{
+      left: -10%;
+      filter: blur(4px);
+    }
+    100%{
+        left: 98% ;
+        filter: blur(5px);
+    }
+}
+@keyframes anim {
+    0%{
+      filter: blur(50px);
+      transform: translate(30%, 200px);
+    }
+    100%{
+      filter: blur(0px);
+      transform: translate(1%, 10px);
+    }
+}
